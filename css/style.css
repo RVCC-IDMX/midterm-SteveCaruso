@@ -148,7 +148,7 @@ footer {
     border-bottom-left-radius:20px;
 
     /* Step 6: */
-    
+
     /* style as shown */
     text-align:center;
 }
@@ -183,3 +183,47 @@ a:hover {
     color:brown;
     text-decoration:underline;
 }
+
+/* The cryptogram! Nearly forgot. Likely best in prior step. */
+#cryptogram {
+    text-align:center;  
+}
+#cryptogram img {
+    width:80%;
+    max-width:30rem;
+}
+#cryptogram figcaption {
+    font-style:italic;
+}
+
+
+
+/* Step 7 */
+
+/* Build the Tablet Layout */
+
+/* greater than or equal to 786 pixels */
+@media screen and (min-width: 768px ) {
+
+    /* font size in the header's h1 should be adjusted appropriately */
+    header h1 {
+        font-size: 3rem;
+    }
+
+    /* using grid, the book reviews should expand to 3 columns */
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    aside h2 {
+        grid-column: 1/-1;
+    }
+    aside .signature {
+        text-align:center;
+    }
+    aside .opinion {
+        text-align:center;
+    }
+
+}
+
