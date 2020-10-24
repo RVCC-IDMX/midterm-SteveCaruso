@@ -1,3 +1,48 @@
 /* Journey to the Center of the Earth Practicum */
 /* Steve Caruso */
 
+
+/* Step 5: */
+
+/* Structural elements */
+
+header, nav, main, aside, footer {
+    /* Set margins */
+    margin: .25rem; 
+    /* Set padding */
+    padding: 1.25em; 
+    /* Set border */
+    border: 2px solid  #886644; 
+    /* Set drop shadow */
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5) inset;
+    
+    /* This comes in later:
+    background-color:rgba(255,255,255,.75); */
+}
+
+/* HEADER */
+
+header {
+    
+    /* Round the border */
+    border-top-right-radius:20px;
+    border-top-left-radius:20px;
+
+    /* This stuff later
+    box-shadow: 20px 20px 20px black inset;
+    text-align:center;
+    background-image: url(../img/cave.jpg);
+    background-position: center;
+    background-size:100%;
+    padding:0px;
+    */
+}
+
+/* FOOTER */
+
+footer {
+
+    /* Round the border */
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px;
+}
