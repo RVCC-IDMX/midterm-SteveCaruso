@@ -227,3 +227,40 @@ a:hover {
 
 }
 
+/* Step 8: */
+
+/* Build the Desktop Layout */
+
+/* greater than or equal to 1024 pixels */
+@media screen and (min-width: 1024px ) {
+
+    /* the whole layout should switch to 2 columns */
+    body {
+        display:grid;
+        grid-template-columns: auto 20rem;
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer"
+        ;
+
+        /* maximum width of the page should be 1200 pixels */
+        max-width:1200px;
+        /* after which it stays centered with expanding margins */
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    header { grid-area: header; }
+    nav { grid-area: nav; }
+    main { grid-area: main; }
+    aside { grid-area: aside; }
+    footer { grid-area: footer; }
+
+    /* The book reviews should go back to single column */
+    aside {
+        display: block;
+    }
+
+}
