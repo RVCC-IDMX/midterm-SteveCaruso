@@ -1,12 +1,24 @@
 /* Journey to the Center of the Earth Practicum */
 /* Steve Caruso */
 
+/* Body tag */
 
-/* Step 5: */
+body { 
+    
+    /* Step 6 */
+
+    /* fixed background gradient that goes from brown1 on top to black on the bottom. */
+    background-image: linear-gradient(180deg, #765729, black); 
+    background-attachment:fixed; 
+    margin: 0;
+}
 
 /* Structural elements */
 
 header, nav, main, aside, footer {
+
+    /* Step 5: */
+
     /* Set margins */
     margin: .25rem; 
     /* Set padding */
@@ -16,33 +28,158 @@ header, nav, main, aside, footer {
     /* Set drop shadow */
     box-shadow: 10px 10px 10px rgba(0,0,0,.5) inset;
     
-    /* This comes in later:
-    background-color:rgba(255,255,255,.75); */
+    /* Step 6: */
+    background-color:rgba(255,255,255,.75);
 }
 
 /* HEADER */
 
 header {
     
+    /* Step 5: */
+
     /* Round the border */
     border-top-right-radius:20px;
     border-top-left-radius:20px;
 
-    /* This stuff later
-    box-shadow: 20px 20px 20px black inset;
-    text-align:center;
+    /* Step 6 */
+
+    /* background should be of the cave */
     background-image: url(../img/cave.jpg);
     background-position: center;
     background-size:100%;
+
+    /* inset box shadow to feel even more cavernous */
+    box-shadow: 20px 20px 20px black inset;
+    
+    /* Additional style additions to match the image */
+    text-align:center;
     padding:0px;
-    */
+
 }
+
+/* Step 6 */
+/* Its child heading should be large, bold Georgia text in white with a drop shadow, itself, so it's easily read in front of the cave. */
+header h1 {
+    padding:10px;
+    color:#fff;
+    font-family:Georgia;
+    text-shadow: 5px 5px 5px black;
+}
+
+/* NAV */
+
+/* Step 6: */
+
+/* The list of links should be inline, side by side, with double borders between them.*/
+/* This can be done a variety of ways, but here is one solution. */
+
+nav ul {
+    list-style: none;
+    margin-top:0px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align:center;
+}
+nav li {
+    display: inline;
+    margin-left: 0;
+    border-left: 3px double black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+nav li:first-child {
+    margin-left: 0;
+    border: none;
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+
+/* MAIN */
+
+/* Step 6: */
+
+/* The book cover should be properly floated. */
+#cover {
+    width:200px;
+    float:left;
+    margin-right:1.5rem;
+    margin-bottom:1rem;
+}
+
+/* first line of the first paragraph should be distinctly larger */
+main p:first-of-type::first-line {
+    font-size:130%;
+}
+
+
+/* ASIDE */
+
+/* Step 6: */
+
+/* book reviews need to be styled as shown */
+/* Again there are multiple ways, this is one */
+.opinion {
+    text-align:center;
+}
+.signature {
+    text-align:right;
+    font-style:italic;
+}
+.submission {
+    background-color:rgba(255,255,255,.4);
+    margin:10px;
+    padding:10px;
+    border:1px solid black;
+    
+}
+
 
 /* FOOTER */
 
 footer {
 
+    /* Step 5: */
+
     /* Round the border */
     border-bottom-right-radius:20px;
     border-bottom-left-radius:20px;
+
+    /* Step 6: */
+    
+    /* style as shown */
+    text-align:center;
+}
+
+
+
+/* Step 6 */
+
+/* General Style */
+
+/* Set non-english text to italic */
+span[lang=fr], span[lang=is], span[lang=it] {
+    font-style:italic;
+}
+
+/* Make all character names bold */
+.character {
+    font-weight:bold;
+}
+
+/* Underline all H2s */
+h2 {
+    border-bottom:1px dashed black;
+}
+
+/* Style the links */
+a {
+    color:black;
+    text-decoration:none;
+}
+a:hover {
+    color:brown;
+    text-decoration:underline;
 }
